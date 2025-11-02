@@ -217,135 +217,160 @@
   
 
 <style>
-      /* 부드럽고 다채로운 색감 적용, 명확한 시각 계층 구조 */
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-  
-      body {
-        font-family: 'Noto Sans KR', sans-serif;
-        background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
-        color: #222;
-        margin: 0;
-        padding: 20px;
-        line-height: 1.7;
-      }
-      header, section, footer {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 25px 30px;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 65, 170, 0.15);
-        transition: box-shadow 0.3s ease;
-      }
-      header:hover, section:hover, footer:hover {
-        box-shadow: 0 8px 25px rgba(0, 65, 170, 0.25);
-      }
-      h1, h2, h3 {
-        color: #003d99;
-        font-weight: 800;
-        margin-bottom: 15px;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      }
-      h1 { font-size: 2.8rem; }
-      h2 { font-size: 2rem; border-bottom: 3px solid #4a90e2; padding-bottom: 6px; }
-      h3 { font-size: 1.5rem; margin-top: 30px; }
-  
-      p, li {
-        font-size: 1.1rem;
-        color: #333;
-      }
-      ul, ol {
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
-      a {
-        color: #1a73e8;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      a:hover {
-        text-decoration: underline;
-        color: #004aad;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0 30px 0;
-      }
-      th, td {
-        border: 1px solid #bbb;
-        padding: 12px 15px;
-        text-align: center;
-        font-size: 1rem;
-      }
-      th {
-        background-color: #0059b3;
-        color: #fff;
-      }
-      /* 버튼 스타일 */
-      .btn-cta {
-        display: inline-block;
-        background: #0070f3;
-        color: #fff;
-        font-weight: 700;
-        padding: 14px 30px;
-        border-radius: 40px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 6px 15px rgba(0, 112, 243, 0.35);
-        transition: background-color 0.3s ease;
-        text-align: center;
-        margin-top: 15px;
-        font-size: 1.15rem;
-      }
-      .btn-cta:hover {
-        background-color: #004aad;
-      }
-      /* 입력폼 스타일 */
-      form input[type="text"],
-      form input[type="tel"],
-      form input[type="email"],
-      form select,
-      form textarea {
-        width: 100%;
-        padding: 12px 15px;
-        margin: 10px 0 20px 0;
-        border: 1.8px solid #cccccc;
-        border-radius: 8px;
-        font-size: 1.1rem;
-        transition: border-color 0.3s ease;
-      }
-      form input[type="text"]:focus,
-      form input[type="tel"]:focus,
-      form input[type="email"]:focus,
-      form select:focus,
-      form textarea:focus {
-        border-color: #0070f3;
-        outline: none;
-        box-shadow: 0 0 8px rgba(0, 112, 243, 0.25);
-      }
-      form label {
-        font-weight: 600;
-        color: #004aad;
-      }
-      /* 반응형 */
-      @media (max-width: 640px) {
-        body {
-          padding: 15px 10px;
-        }
-        header, section, footer {
-          padding: 20px 15px;
-        }
-        h1 {
-          font-size: 2rem;
-        }
-        .btn-cta {
-          width: 100%;
-          padding: 16px 0;
-          font-size: 1.2rem;
-        }
-      }
-    </style>
+/* 부드럽고 다채로운 색감 적용, 명확한 시각 계층 구조 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap');
+ 
+body {
+  /* 배경색을 흰색으로 변경 */
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #ffffff; /* 순수한 흰색 배경 */
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+header, section, footer {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: #fcfcfc; /* 섹션/컨테이너 배경은 아주 미세한 밝은 색으로 하여 흰 배경과 구분 */
+  border-radius: 12px;
+  /* 그림자 색상을 흰색 배경에 맞게 조정 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  transition: box-shadow 0.3s ease;
+}
+
+header:hover, section:hover, footer:hover {
+  box-shadow: 0 6px 18px rgba(0, 65, 170, 0.12); /* 호버 시 약간 더 깊은 그림자 */
+}
+
+h1, h2, h3 {
+  color: #003d99; /* 메인 블루 계열 유지 */
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+h1 { font-size: 2.8rem; }
+h2 { 
+  font-size: 2rem; 
+  border-bottom: 3px solid #4a90e2; /* 블루 계열의 구분선 */
+  padding-bottom: 6px; 
+}
+
+h3 { font-size: 1.5rem; margin-top: 30px; }
+ 
+p, li {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #1a73e8; /* 링크 색상 유지 */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #004aad;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 30px 0;
+}
+
+th, td {
+  border: 1px solid #ddd; /* 경계선 색상을 밝게 조정 */
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #0059b3; /* 테이블 헤더 색상 유지 */
+  color: #fff;
+}
+
+/* 버튼 스타일 */
+.btn-cta {
+  display: inline-block;
+  background: #0070f3;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 112, 243, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.15rem;
+}
+
+.btn-cta:hover {
+  background-color: #004aad;
+  box-shadow: 0 8px 20px rgba(0, 112, 243, 0.5); /* 호버 시 그림자 강조 */
+}
+
+/* 입력폼 스타일 */
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0 20px 0;
+  border: 1.8px solid #cccccc;
+  background-color: #fff; /* 입력 필드 배경색 명시적 흰색 */
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0070f3;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 112, 243, 0.25);
+}
+
+form label {
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  body {
+    padding: 15px 10px;
+  }
+  header, section, footer {
+    padding: 20px 15px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .btn-cta {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.2rem;
+  }
+}
+</style>
     
     <!-- Schema.org LocalBusiness 마크업(JSON-LD) -->
     <script type="application/ld+json">
@@ -666,6 +691,7 @@
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" data-bootloader-hash="mgYHw9T" async="1" crossorigin="anonymous" data-p=":160" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" data-bootloader-hash="cDTWgQH" async="1" crossorigin="anonymous" data-p=":139" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" data-bootloader-hash="qgmbN7Z" async="1" crossorigin="anonymous" data-p=":74" data-btmanifest="1027280358_main" data-c="1"></script>
+
 
 
 
